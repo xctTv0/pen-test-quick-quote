@@ -45,7 +45,7 @@ export const LeadForm = () => {
       });
 
       if (response.ok) {
-        toast.success("Thank you! We'll get back to you within 24 hours.");
+        toast.success("Thank you! We'll get back to you within 24 hours. Should you want to have a look at what other services we provide check our website at https://www.safetechinnovations.com/");
         resetForm();
       } else {
         throw new Error("Failed to submit form");
