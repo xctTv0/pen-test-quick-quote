@@ -22,14 +22,6 @@ const Index = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-safetech-navy">
             Professional Penetration Testing Services by Safetech Innovations
           </h1>
-          <div className="relative w-full max-w-3xl mx-auto mb-8">
-            <img
-              src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
-              alt="Cybersecurity Code Analysis"
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
-          </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Identify vulnerabilities before attackers do. Get a comprehensive security assessment from our certified experts at Safetech Innovations.
           </p>
