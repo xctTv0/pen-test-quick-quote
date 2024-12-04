@@ -1,4 +1,4 @@
-import { Shield, CheckCircle, Award, Certificate } from "lucide-react";
+import { Shield, CheckCircle, Award, ShieldCheck } from "lucide-react";
 
 export const TrustBadges = () => {
   return (
@@ -9,7 +9,7 @@ export const TrustBadges = () => {
         <p className="text-sm text-gray-600">Our pen testers hold CREST certifications</p>
       </div>
       <div className="flex flex-col items-center text-center space-y-2">
-        <Certificate className="w-12 h-12 text-safetech-blue" />
+        <ShieldCheck className="w-12 h-12 text-safetech-blue" />
         <h3 className="font-semibold">Certified Experts</h3>
         <p className="text-sm text-gray-600">Industry-leading penetration testing methodology</p>
       </div>
