@@ -13,6 +13,7 @@ export const useLeadFormState = () => {
       infrastructure: false,
       other: false,
     },
+    otherTarget: "",
     projectDescription: "",
     testType: "black",
     ipAddressCount: "",
@@ -46,6 +47,10 @@ export const useLeadFormState = () => {
     setFormData({ ...formData, ddosRequired: value });
   };
 
+  const handleOtherTargetChange = (value: string) => {
+    setFormData({ ...formData, otherTarget: value });
+  };
+
   const resetForm = () => {
     setFormData({
       email: "",
@@ -59,6 +64,7 @@ export const useLeadFormState = () => {
         infrastructure: false,
         other: false,
       },
+      otherTarget: "",
       projectDescription: "",
       testType: "black",
       ipAddressCount: "",
@@ -77,6 +83,7 @@ export const useLeadFormState = () => {
     handleCheckboxChange,
     handleTestTypeChange,
     handleDdosChange,
+    handleOtherTargetChange,
     resetForm,
   };
 };

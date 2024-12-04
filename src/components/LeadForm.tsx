@@ -14,6 +14,7 @@ export const LeadForm = () => {
     handleCheckboxChange,
     handleTestTypeChange,
     handleDdosChange,
+    handleOtherTargetChange,
     resetForm,
   } = useLeadFormState();
 
@@ -68,7 +69,9 @@ export const LeadForm = () => {
 
         <TestTargets
           targets={formData.targets}
+          otherTarget={formData.otherTarget}
           onTargetChange={handleCheckboxChange}
+          onOtherTargetChange={handleOtherTargetChange}
         />
 
         <TestDetails

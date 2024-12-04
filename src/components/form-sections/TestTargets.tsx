@@ -1,5 +1,6 @@
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
 
 interface TestTargetsProps {
   targets: {
@@ -10,10 +11,17 @@ interface TestTargetsProps {
     infrastructure: boolean;
     other: boolean;
   };
+  otherTarget?: string;
   onTargetChange: (target: string) => void;
+  onOtherTargetChange?: (value: string) => void;
 }
 
-export const TestTargets = ({ targets, onTargetChange }: TestTargetsProps) => {
+export const TestTargets = ({ 
+  targets, 
+  otherTarget = "", 
+  onTargetChange,
+  onOtherTargetChange 
+}: TestTargetsProps) => {
   return (
     <div className="space-y-2">
       <Label>Penetration Test Targets *</Label>
@@ -67,6 +75,16 @@ export const TestTargets = ({ targets, onTargetChange }: TestTargetsProps) => {
           <label htmlFor="other" className="text-sm">Other</label>
         </div>
       </div>
+      {targets.other && (
+        <div className="mt-2">
+          <Input
+            placeholder="Please specify other target"
+            value={otherTarget}
+            onChange={(e) => onOtherTargetChange?.(e.target.value)}
+            className="max-w-md"
+          />
+        </div>
+      )}
     </div>
   );
 };
