@@ -22,7 +22,6 @@ export const useLeadFormState = () => {
     webAppUrls: "",
     technologies: "",
     focusAreas: "",
-    ddosRequired: "no",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -41,10 +40,6 @@ export const useLeadFormState = () => {
 
   const handleTestTypeChange = (value: string) => {
     setFormData({ ...formData, testType: value });
-  };
-
-  const handleDdosChange = (value: string) => {
-    setFormData({ ...formData, ddosRequired: value });
   };
 
   const handleOtherTargetChange = (value: string) => {
@@ -73,7 +68,6 @@ export const useLeadFormState = () => {
       webAppUrls: "",
       technologies: "",
       focusAreas: "",
-      ddosRequired: "no",
     });
   };
 
@@ -82,7 +76,6 @@ export const useLeadFormState = () => {
     handleChange,
     handleCheckboxChange,
     handleTestTypeChange,
-    handleDdosChange,
     handleOtherTargetChange,
     resetForm,
   };

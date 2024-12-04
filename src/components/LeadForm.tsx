@@ -13,7 +13,6 @@ export const LeadForm = () => {
     handleChange,
     handleCheckboxChange,
     handleTestTypeChange,
-    handleDdosChange,
     handleOtherTargetChange,
     resetForm,
   } = useLeadFormState();
@@ -92,9 +91,7 @@ export const LeadForm = () => {
 
         <SecurityFocusSection
           focusAreas={formData.focusAreas}
-          ddosRequired={formData.ddosRequired}
           onChange={handleChange}
-          onDdosChange={handleDdosChange}
         />
       </div>
 
