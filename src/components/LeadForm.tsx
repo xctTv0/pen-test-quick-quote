@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { toast } from "sonner";
 
 export const LeadForm = () => {
@@ -21,6 +22,8 @@ export const LeadForm = () => {
       other: false,
     },
     projectDescription: "",
+    testType: "black", // default value
+    ipAddressCount: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -42,6 +45,8 @@ export const LeadForm = () => {
         other: false,
       },
       projectDescription: "",
+      testType: "black",
+      ipAddressCount: "",
     });
   };
 
@@ -57,6 +62,10 @@ export const LeadForm = () => {
         [target]: !formData.targets[target as keyof typeof formData.targets],
       },
     });
+  };
+
+  const handleTestTypeChange = (value: string) => {
+    setFormData({ ...formData, testType: value });
   };
 
   return (
@@ -161,6 +170,38 @@ export const LeadForm = () => {
               <label htmlFor="other" className="text-sm">Other</label>
             </div>
           </div>
+        </div>
+
+        <div className="space-y-2">
+          <Label>Testing Type *</Label>
+          <RadioGroup value={formData.testType} onValueChange={handleTestTypeChange} className="grid grid-cols-3 gap-4 mt-2">
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="black" id="black" />
+              <label htmlFor="black" className="text-sm">Black Box</label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="white" id="white" />
+              <label htmlFor="white" className="text-sm">White Box</label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="grey" id="grey" />
+              <label htmlFor="grey" className="text-sm">Grey Box</label>
+            </div>
+          </RadioGroup>
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="ipAddressCount">Number of IP Addresses in Scope *</Label>
+          <Input
+            id="ipAddressCount"
+            name="ipAddressCount"
+            type="number"
+            required
+            min="1"
+            value={formData.ipAddressCount}
+            onChange={handleChange}
+            placeholder="e.g., 5"
+          />
         </div>
 
         <div className="space-y-2">
