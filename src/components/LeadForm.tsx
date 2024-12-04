@@ -36,7 +36,7 @@ export const LeadForm = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "YOUR_WEB3FORMS_ACCESS_KEY", // You'll need to set this up
+          access_key: "e2550906-ceef-41b6-bc44-fb048afd966a",
           subject: "New Penetration Testing Quote Request",
           from_name: formData.company,
           recipients: ["astancu@safetechinnovations.com", "jkay@safetechinnovations.com"],
