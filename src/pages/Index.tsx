@@ -6,12 +6,19 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <div className="container max-w-6xl mx-auto px-4 py-12">
+        <div className="flex items-center justify-center mb-8">
+          <img
+            src="https://www.safetechinnovations.com/wp-content/uploads/2023/05/SafeTech-Logo-Horizontal-Navy.png"
+            alt="SafeTech Innovations"
+            className="h-12 md:h-16"
+          />
+        </div>
         <div className="text-center space-y-4 mb-12 animate-fadeIn">
           <h1 className="text-4xl md:text-5xl font-bold text-safetech-navy">
-            Professional Penetration Testing Services
+            Professional Penetration Testing Services by SafeTech Innovations
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Identify vulnerabilities before attackers do. Get a comprehensive security assessment from our certified experts.
+            Identify vulnerabilities before attackers do. Get a comprehensive security assessment from our certified experts at SafeTech Innovations.
           </p>
           <p className="text-lg text-safetech-blue font-semibold mt-4">
             Maximum security insights, exceptional value for your investment
@@ -22,7 +29,7 @@ const Index = () => {
           <div className="space-y-6 animate-fadeIn">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h2 className="text-2xl font-semibold text-safetech-navy mb-4">
-                Why Choose Our Pen Testing Service?
+                Why Choose SafeTech's Pen Testing Service?
               </h2>
               <ul className="space-y-4">
                 <li className="flex items-start">
@@ -52,7 +59,7 @@ const Index = () => {
 
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold text-safetech-navy mb-6">
-              Get Your Pen Testing Quote
+              Get Your SafeTech Pen Testing Quote
             </h2>
             <LeadForm />
           </div>
