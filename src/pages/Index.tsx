@@ -41,22 +41,6 @@ const Index = () => {
               </ul>
             </div>
             <TrustBadges />
-            <div className="flex gap-4">
-              <Button
-                variant="outline"
-                className="text-safetech-navy hover:text-safetech-blue"
-                onClick={() => window.open('https://www.safetechinnovations.com/privacy-policy', '_blank')}
-              >
-                Privacy Policy
-              </Button>
-              <Button
-                variant="outline"
-                className="text-safetech-navy hover:text-safetech-blue"
-                onClick={() => window.open('https://www.safetechinnovations.com/who-we-are', '_blank')}
-              >
-                About Us
-              </Button>
-            </div>
           </div>
 
           <div className="bg-white p-8 rounded-lg shadow-lg">
@@ -65,6 +49,23 @@ const Index = () => {
             </h2>
             <LeadForm />
           </div>
+        </div>
+
+        <div className="flex justify-center gap-4 mt-12">
+          <Button
+            variant="outline"
+            className="text-safetech-navy hover:text-safetech-blue"
+            onClick={() => window.open('https://www.safetechinnovations.com/privacy-policy', '_blank')}
+          >
+            Privacy Policy
+          </Button>
+          <Button
+            variant="outline"
+            className="text-safetech-navy hover:text-safetech-blue"
+            onClick={() => window.open('https://www.safetechinnovations.com/who-we-are', '_blank')}
+          >
+            About Us
+          </Button>
         </div>
       </div>
     </div>
