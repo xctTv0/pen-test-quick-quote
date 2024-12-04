@@ -3,7 +3,6 @@ import { useState } from "react";
 export const useLeadFormState = () => {
   const [formData, setFormData] = useState({
     email: "",
-    password: "",
     company: "",
     phone: "",
     targets: {
@@ -50,7 +49,6 @@ export const useLeadFormState = () => {
   const resetForm = () => {
     setFormData({
       email: "",
-      password: "",
       company: "",
       phone: "",
       targets: {

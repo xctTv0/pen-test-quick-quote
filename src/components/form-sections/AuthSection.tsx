@@ -3,13 +3,12 @@ import { Input } from "@/components/ui/input";
 
 interface AuthSectionProps {
   email: string;
-  password: string;
   company: string;
   phone: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const AuthSection = ({ email, password, company, phone, onChange }: AuthSectionProps) => {
+export const AuthSection = ({ email, company, phone, onChange }: AuthSectionProps) => {
   return (
     <div className="space-y-4">
       <div className="space-y-2">
@@ -22,18 +21,6 @@ export const AuthSection = ({ email, password, company, phone, onChange }: AuthS
           value={email}
           onChange={onChange}
           placeholder="john@company.com"
-        />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="password">Password</Label>
-        <Input
-          id="password"
-          name="password"
-          type="password"
-          required
-          value={password}
-          onChange={onChange}
-          placeholder="••••••••"
         />
       </div>
       <div className="space-y-2">

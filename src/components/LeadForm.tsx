@@ -29,7 +29,6 @@ export const LeadForm = () => {
       <div className="space-y-6">
         <AuthSection
           email={formData.email}
-          password={formData.password}
           company={formData.company}
           phone={formData.phone}
           onChange={handleChange}
