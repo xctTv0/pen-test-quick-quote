@@ -10,7 +10,7 @@ const Index = () => {
           <img
             src="/lovable-uploads/4d82b6be-b36b-452f-ba07-bd20936a717f.png"
             alt="Safetech Innovations Global Services"
-            className="h-20 md:h-24 w-auto object-contain"
+            className="h-24 md:h-32 w-auto object-contain"
             onError={(e) => {
               console.error('Error loading logo:', e);
               e.currentTarget.style.display = 'none';
