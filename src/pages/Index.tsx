@@ -10,9 +10,14 @@ const Index = () => {
           <img
             src="/lovable-uploads/4d82b6be-b36b-452f-ba07-bd20936a717f.png"
             alt="SafeTech Innovations Global Services"
-            className="h-20 md:h-24"
+            className="h-20 md:h-24 w-auto object-contain"
+            onError={(e) => {
+              console.error('Error loading logo:', e);
+              e.currentTarget.style.display = 'none';
+            }}
           />
         </div>
+
         <div className="text-center space-y-4 mb-12 animate-fadeIn">
           <h1 className="text-4xl md:text-5xl font-bold text-safetech-navy">
             Professional Penetration Testing Services by SafeTech Innovations
