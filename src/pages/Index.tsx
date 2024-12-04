@@ -13,22 +13,6 @@ const Index = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Identify vulnerabilities before attackers do. Get a comprehensive security assessment from our certified experts.
           </p>
-          <div className="flex justify-center gap-4">
-            <Button
-              variant="outline"
-              className="text-safetech-navy hover:text-safetech-blue"
-              onClick={() => window.open('https://www.safetechinnovations.com/privacy-policy', '_blank')}
-            >
-              Privacy Policy
-            </Button>
-            <Button
-              variant="outline"
-              className="text-safetech-navy hover:text-safetech-blue"
-              onClick={() => window.open('https://www.safetechinnovations.com/who-we-are', '_blank')}
-            >
-              About Us
-            </Button>
-          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -57,6 +41,22 @@ const Index = () => {
               </ul>
             </div>
             <TrustBadges />
+            <div className="flex gap-4">
+              <Button
+                variant="outline"
+                className="text-safetech-navy hover:text-safetech-blue"
+                onClick={() => window.open('https://www.safetechinnovations.com/privacy-policy', '_blank')}
+              >
+                Privacy Policy
+              </Button>
+              <Button
+                variant="outline"
+                className="text-safetech-navy hover:text-safetech-blue"
+                onClick={() => window.open('https://www.safetechinnovations.com/who-we-are', '_blank')}
+              >
+                About Us
+              </Button>
+            </div>
           </div>
 
           <div className="bg-white p-8 rounded-lg shadow-lg">
