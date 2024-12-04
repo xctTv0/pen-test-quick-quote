@@ -17,11 +17,43 @@ export const LeadForm = () => {
     resetForm,
   } = useLeadFormState();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    toast.success("Thank you! We'll get back to you within 24 hours.");
-    resetForm();
+    
+    try {
+      // Create email content
+      const emailContent = {
+        to: ["astancu@safetechinnovations.com", "jkay@safetechinnovations.com"],
+        subject: "New Penetration Testing Quote Request",
+        formData: formData
+      };
+
+      // Send to your email handling service
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "YOUR_WEB3FORMS_ACCESS_KEY", // You'll need to set this up
+          subject: "New Penetration Testing Quote Request",
+          from_name: formData.company,
+          recipients: ["astancu@safetechinnovations.com", "jkay@safetechinnovations.com"],
+          message: JSON.stringify(formData, null, 2),
+        }),
+      });
+
+      if (response.ok) {
+        toast.success("Thank you! We'll get back to you within 24 hours.");
+        resetForm();
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("There was an error submitting your request. Please try again.");
+    }
   };
 
   return (
