@@ -5,6 +5,7 @@ import { AuthSection } from "./form-sections/AuthSection";
 import { TestTargets } from "./form-sections/TestTargets";
 import { TestDetails } from "./form-sections/TestDetails";
 import { ApplicationDetails } from "./form-sections/ApplicationDetails";
+import { SecurityFocusSection } from "./form-sections/SecurityFocusSection";
 
 export const LeadForm = () => {
   const [formData, setFormData] = useState({
@@ -27,6 +28,8 @@ export const LeadForm = () => {
     webAppCount: "",
     webAppUrls: "",
     technologies: "",
+    focusAreas: "",
+    ddosRequired: "no",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -53,6 +56,8 @@ export const LeadForm = () => {
       webAppCount: "",
       webAppUrls: "",
       technologies: "",
+      focusAreas: "",
+      ddosRequired: "no",
     });
   };
 
@@ -72,6 +77,10 @@ export const LeadForm = () => {
 
   const handleTestTypeChange = (value: string) => {
     setFormData({ ...formData, testType: value });
+  };
+
+  const handleDdosChange = (value: string) => {
+    setFormData({ ...formData, ddosRequired: value });
   };
 
   return (
@@ -104,6 +113,13 @@ export const LeadForm = () => {
           webAppUrls={formData.webAppUrls}
           technologies={formData.technologies}
           onChange={handleChange}
+        />
+
+        <SecurityFocusSection
+          focusAreas={formData.focusAreas}
+          ddosRequired={formData.ddosRequired}
+          onChange={handleChange}
+          onDdosChange={handleDdosChange}
         />
       </div>
 
