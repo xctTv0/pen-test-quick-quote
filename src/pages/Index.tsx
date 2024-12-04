@@ -8,9 +8,9 @@ const Index = () => {
       <div className="container max-w-6xl mx-auto px-4 py-12">
         <div className="flex items-center justify-center mb-8">
           <img
-            src="https://www.safetechinnovations.com/wp-content/uploads/2023/05/SafeTech-Logo-Horizontal-Navy.png"
-            alt="SafeTech Innovations"
-            className="h-12 md:h-16"
+            src="/lovable-uploads/4d82b6be-b36b-452f-ba07-bd20936a717f.png"
+            alt="SafeTech Innovations Global Services"
+            className="h-20 md:h-24"
           />
         </div>
         <div className="text-center space-y-4 mb-12 animate-fadeIn">
