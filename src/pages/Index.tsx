@@ -1,11 +1,54 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { LeadForm } from "@/components/LeadForm";
+import { TrustBadges } from "@/components/TrustBadges";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <div className="container max-w-6xl mx-auto px-4 py-12">
+        <div className="text-center space-y-4 mb-12 animate-fadeIn">
+          <h1 className="text-4xl md:text-5xl font-bold text-safetech-navy">
+            Professional Penetration Testing Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Identify vulnerabilities before attackers do. Get a comprehensive security assessment from our certified experts.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="space-y-6 animate-fadeIn">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h2 className="text-2xl font-semibold text-safetech-navy mb-4">
+                Why Choose Our Pen Testing Service?
+              </h2>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <span className="text-safetech-blue mr-2">✓</span>
+                  <span>Comprehensive vulnerability assessment</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-safetech-blue mr-2">✓</span>
+                  <span>Detailed reporting with actionable insights</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-safetech-blue mr-2">✓</span>
+                  <span>Expert remediation guidance</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-safetech-blue mr-2">✓</span>
+                  <span>Quick turnaround time</span>
+                </li>
+              </ul>
+            </div>
+            <TrustBadges />
+          </div>
+
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h2 className="text-2xl font-semibold text-safetech-navy mb-6">
+              Get Your Pen Testing Quote
+            </h2>
+            <LeadForm />
+          </div>
+        </div>
       </div>
     </div>
   );
