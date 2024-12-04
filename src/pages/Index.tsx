@@ -13,6 +13,9 @@ const Index = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Identify vulnerabilities before attackers do. Get a comprehensive security assessment from our certified experts.
           </p>
+          <p className="text-lg text-safetech-blue font-semibold mt-4">
+            Maximum security insights, exceptional value for your investment
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -37,6 +40,10 @@ const Index = () => {
                 <li className="flex items-start">
                   <span className="text-safetech-blue mr-2">✓</span>
                   <span>Quick turnaround time</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-safetech-blue mr-2">✓</span>
+                  <span>Best-in-class value for your security budget</span>
                 </li>
               </ul>
             </div>
