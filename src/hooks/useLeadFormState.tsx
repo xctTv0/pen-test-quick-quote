@@ -17,6 +17,8 @@ export const useLeadFormState = () => {
     projectDescription: "",
     testType: "black",
     ipAddressCount: "",
+    totalRoles: "",
+    rolesToTest: "",
     appCount: "",
     webAppCount: "",
     webAppUrls: "",
@@ -39,7 +41,12 @@ export const useLeadFormState = () => {
   };
 
   const handleTestTypeChange = (value: string) => {
-    setFormData({ ...formData, testType: value });
+    setFormData({ 
+      ...formData, 
+      testType: value,
+      // Reset role-related fields when switching to black box testing
+      ...(value === "black" && { totalRoles: "", rolesToTest: "" })
+    });
   };
 
   const handleOtherTargetChange = (value: string) => {
@@ -63,6 +70,8 @@ export const useLeadFormState = () => {
       projectDescription: "",
       testType: "black",
       ipAddressCount: "",
+      totalRoles: "",
+      rolesToTest: "",
       appCount: "",
       webAppCount: "",
       webAppUrls: "",

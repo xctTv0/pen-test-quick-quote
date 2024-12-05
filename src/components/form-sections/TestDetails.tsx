@@ -38,6 +38,35 @@ export const TestDetails = ({
         </RadioGroup>
       </div>
 
+      {(testType === "white" || testType === "grey") && (
+        <div className="space-y-4 animate-fadeIn">
+          <div className="space-y-2">
+            <Label htmlFor="totalRoles">Total Number of Application Roles *</Label>
+            <Input
+              id="totalRoles"
+              name="totalRoles"
+              type="number"
+              required
+              min="1"
+              onChange={onChange}
+              placeholder="e.g., 5"
+            />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="rolesToTest">Number of Roles to be Tested *</Label>
+            <Input
+              id="rolesToTest"
+              name="rolesToTest"
+              type="number"
+              required
+              min="1"
+              onChange={onChange}
+              placeholder="e.g., 3"
+            />
+          </div>
+        </div>
+      )}
+
       <div className="space-y-2">
         <Label htmlFor="ipAddressCount">Number of IP Addresses in Scope *</Label>
         <Input
