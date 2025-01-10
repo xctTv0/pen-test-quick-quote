@@ -20,13 +20,13 @@ const Index = () => {
 
         <div className="text-center space-y-4 mb-12 animate-fadeIn">
           <h1 className="text-4xl md:text-5xl font-bold text-safetech-navy">
-            Professional Penetration Testing Services by Safetech Innovations
+            Get Your Instant Penetration Testing Quote
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Identify vulnerabilities before attackers do. Get a comprehensive security assessment from our certified experts at Safetech Innovations.
+            Quick, hassle-free quotes for professional penetration testing services. Fill out our simple form and get your customized quote instantly from Safetech Innovations.
           </p>
           <p className="text-lg text-safetech-blue font-semibold mt-4">
-            Maximum security insights, exceptional value for your investment
+            Fast quotes, professional service, competitive pricing
           </p>
         </div>
 
@@ -34,9 +34,13 @@ const Index = () => {
           <div className="space-y-6 animate-fadeIn">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h2 className="text-2xl font-semibold text-safetech-navy mb-4">
-                Why Choose Safetech's Pen Testing Service?
+                Why Choose Safetech's Quick Quote Service?
               </h2>
               <ul className="space-y-4">
+                <li className="flex items-start">
+                  <span className="text-safetech-blue mr-2">✓</span>
+                  <span>Instant quote generation</span>
+                </li>
                 <li className="flex items-start">
                   <span className="text-safetech-blue mr-2">✓</span>
                   <span>Comprehensive vulnerability assessment</span>
@@ -51,10 +55,6 @@ const Index = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-safetech-blue mr-2">✓</span>
-                  <span>Quick turnaround time</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-safetech-blue mr-2">✓</span>
                   <span>Best-in-class value for your security budget</span>
                 </li>
               </ul>
@@ -64,7 +64,7 @@ const Index = () => {
 
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold text-safetech-navy mb-6">
-              Get Your Safetech Pen Testing Quote
+              Get Your Instant Quote Now
             </h2>
             <LeadForm />
           </div>
