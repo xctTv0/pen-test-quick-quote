@@ -24,9 +24,9 @@ const Index = () => {
             <div className="flex items-center gap-2">
               <span className="font-bold text-lg text-safetech-navy">in partnership with</span>
               <img
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                src="/lovable-uploads/03e39637-2dce-4dde-b9d6-58b358854a84.png"
                 alt="Cibernetica.io"
-                className="h-16 md:h-20 w-auto object-contain rounded"
+                className="h-16 md:h-20 w-auto object-contain"
                 onError={(e) => {
                   console.error('Error loading Cibernetica logo:', e);
                   e.currentTarget.style.display = 'none';
