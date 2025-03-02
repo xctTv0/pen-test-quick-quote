@@ -1,21 +1,39 @@
+
 import { LeadForm } from "@/components/LeadForm";
 import { TrustBadges } from "@/components/TrustBadges";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <div className="container max-w-6xl mx-auto px-4 py-12">
-        <div className="flex items-center justify-center mb-8">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
           <img
             src="/lovable-uploads/4d82b6be-b36b-452f-ba07-bd20936a717f.png"
             alt="Safetech Innovations Global Services"
-            className="h-24 md:h-32 w-auto object-contain"
+            className="h-20 md:h-28 w-auto object-contain"
             onError={(e) => {
               console.error('Error loading logo:', e);
               e.currentTarget.style.display = 'none';
             }}
           />
+          <div className="flex items-center">
+            <Separator orientation="vertical" className="h-12 mx-4 hidden md:block" />
+            <span className="text-gray-500 mx-2 md:hidden">×</span>
+            <div className="flex items-center gap-2">
+              <span className="font-bold text-lg text-safetech-navy">in partnership with</span>
+              <img
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt="Cibernetica.io"
+                className="h-16 md:h-20 w-auto object-contain rounded"
+                onError={(e) => {
+                  console.error('Error loading Cibernetica logo:', e);
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
+            </div>
+          </div>
         </div>
 
         <div className="text-center space-y-4 mb-12 animate-fadeIn">
